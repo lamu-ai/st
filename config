@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+sed -i 's/Liberation Mono/monospace/g' config.def.h
+sed -i 's/borderpx = 2/borderpx = 20/g' config.def.h
+sed -i 's/alpha = 0.8/alpha = 0.85/g' config.def.h
+sed -i 's/alphaUnfocused = 0.6/alphaUnfocused = 0.75/g' config.def.h
+sed -i 's/*shell = "\/bin\/sh"/*shell = "\/bin\/zsh"/g' config.def.h
+sed -i 's/chscale = 1.0/chscale = 0.9/g' config.def.h
+sed -i 's/cursorstyle = 1/cursorstyle = 3/g' config.def.h
+sed -i 's/defaultfg = 7/defaultfg = 257/g' config.def.h
+sed -i 's/defaultbg = 0/defaultbg = 256/g' config.def.h
+sed -i 's/defaultcs = 256/defaultcs = 258/g' config.def.h
+sed -i 's/defaultrcs = 257/defaultrcs = 258/g' config.def.h
+sed -i 's/bg = 17/bg = 256/g' config.def.h
+sed -i 's/bgUnfocused = 16/bgUnfocused = 256/g' config.def.h
+
