@@ -8,15 +8,15 @@ patch -p1 < ../st-scrollback-mouse-altscreen-20200416-5703aa0.diff
 patch -p1 < ../st-anysize-0.8.4.diff
 patch -p1 < ../st-ligatures-alpha-scrollback-20200430-0.8.3.diff
 patch -p1 < ../st-vertcenter-20180320-6ac8c8a.diff
-patch -p1 < ../st-blinking_cursor-20200531-a2a7044.diff
+patch -p1 < ../st-blinking_cursor-0.8.4-custom.diff
 patch -p1 < ../st-bold-is-not-bright-20190127-3be4cf1.diff
 patch -p1 < ../st-clipboard-0.8.3.diff
 patch -p1 < ../st-defaultfontsize-20210225-4ef0cbd.diff
-patch -p1 < ../st-delkey-0.8.4.diff
+patch -p1 < ../st-delkey-0.8.4-custom.diff
 patch -p1 < ../st-desktopentry-0.8.4.diff
 patch -p1 < ../st-dynamic-cursor-color-0.8.4.diff
-patch -p1 < ../st-hidecursor-0.8.4.diff
+patch -p1 < ../st-hidecursor-0.8.4-custom.diff
 patch -p1 < ../st-xresources-20200604-9ba7ecf.diff
-patch -p1 < ../st-undercurl-0.8.4.diff
-patch -p1 < ../st-newterm-0.8.4.diff
+patch -p1 < ../st-undercurl-0.8.4-custom.diff
+patch -p1 < ../st-newterm-0.8.4-custom.diff
 
