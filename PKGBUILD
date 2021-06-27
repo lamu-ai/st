@@ -15,7 +15,6 @@ source=(https://dl.suckless.org/$pkgname/$pkgname-$pkgver.tar.gz
 	      https://st.suckless.org/patches/alpha/st-alpha-0.8.2.diff
       	https://st.suckless.org/patches/alpha_focus_highlight/st-focus-20200731-patch_alpha.diff
       	https://st.suckless.org/patches/anysize/st-anysize-0.8.4.diff
-      	https://st.suckless.org/patches/blinking_cursor/st-blinking_cursor-20200531-a2a7044.diff
       	https://st.suckless.org/patches/bold-is-not-bright/st-bold-is-not-bright-20190127-3be4cf1.diff
       	https://st.suckless.org/patches/clipboard/st-clipboard-0.8.3.diff
       	https://st.suckless.org/patches/defaultfontsize/st-defaultfontsize-20210225-4ef0cbd.diff
@@ -27,17 +26,17 @@ source=(https://dl.suckless.org/$pkgname/$pkgname-$pkgver.tar.gz
       	https://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-20200416-5703aa0.diff
       	https://st.suckless.org/patches/vertcenter/st-vertcenter-20180320-6ac8c8a.diff
       	https://st.suckless.org/patches/xresources/st-xresources-20200604-9ba7ecf.diff
-        https://st.suckless.org/patches/undercurl/st-undercurl-0.8.4.diff
-      	st-delkey-0.8.4.diff
-      	st-hidecursor-0.8.4.diff
-      	st-newterm-0.8.4.diff
+        st-blinking_cursor-0.8.4-custom.diff
+        st-delkey-0.8.4-custom.diff
+        st-hidecursor-0.8.4-custom.diff
+        st-newterm-0.8.4-custom.diff
+        st-undercurl-0.8.4-custom.diff
       	patch
       	config)
 sha256sums=('d42d3ceceb4d6a65e32e90a5336e3d446db612c3fbd9ebc1780bc6c9a03346a6'
             '9c5b4b4f23de80de78ca5ec3739dc6ce5e7f72666186cf4a9c6b614ac90fb285'
             'b24282d68d35ac6d797185b0ee1d10d2b2a9abc525406c8f6ebf41ff5316a0d2'
             '3851f7919e788cc6667ffdb28ca743188e2869a15f3fc34a8c0b39108d946ef0'
-            'f05487e7f6d4d0d81f44f5a317b0f9bbe6d340fd80c9326aa4bae8da4127aa2d'
             '329169acac7ceaf901995d6e0897913089b799d8cd150c7f04c902f4a5b8eab2'
             '0f5ce33953abce74a9da3088ea35bf067a9a4cfeb9fe6ea9800268ce69e436c0'
             '159c4b83ebade7381d3dbc07faba40e5f1fd2a91b057765ef7f37e93c00d514a'
@@ -49,7 +48,8 @@ sha256sums=('d42d3ceceb4d6a65e32e90a5336e3d446db612c3fbd9ebc1780bc6c9a03346a6'
             'cb87eb654985da46ff63663407184402393ad3d3013c8795570552fe56a15b9d'
             '04e6a4696293f668260b2f54a7240e379dbfabbc209de07bd5d4d57e9f513360'
             '5be9b40d2b51761685f6503e92028a7858cc6571a8867b88612fce8a70514d5b'
-            '7d486da6d1de71a8f7dc53c1e5853e9b546817d06ef238671aabb4e81da0e8bb'
+            'SKIP'
+            'SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
@@ -61,6 +61,7 @@ prepare () {
 	cp -t . "${srcdir}/patch" "${srcdir}/config"
 	./patch
 	./config
+  sed -i 's/tic -sx st.info//g' Makefile
 }
 
 build () {
